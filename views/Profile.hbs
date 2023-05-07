@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../CSS/profile.css">
+  <link rel="stylesheet" href="../CSS/header.css">
+  <link rel="stylesheet" href="../CSS/footer.css">
+  <meta name="keywords" content="profile, luck tree , lottery , prediction">
+  <meta name="description" content="luck tree profile page user details.">
+  <meta name="author" content="Rahul vishwakarma">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script defer src="../JS/profile.js"></script>
+</head>
+
+<body>
+  <section class="profile">
+    <main class="profile_two">
+      <div class="triangle_one"></div>
+      <div class="triangle_two"></div>
+      <div class="triangle_third"></div>
+      <h4><ion-icon name="cog"></ion-icon></h4>
+
+      <div class="round">
+        <img src="../PHOTOS/profile.jpg" alt="">
+        <h3>
+          <p>₹ <label class = "balance">00,00</label></p>
+        </h3>
+      </div>
+
+      <div class="profile_pic">
+        <label><ion-icon name="person"></ion-icon></label>
+        <p><ion-icon name="camera"></ion-icon></p>
+      </div>
+
+      <div class="profile_details">
+        <span class="user_details">
+          <h3>
+            <p>rahul vishwakarma</p>
+          </h3>
+          <h4>
+            <ion-icon name="camera"></ion-icon>
+            <p class = 'phone'>9304411522</p>
+          </h4>
+        </span>
+        <div class="profile_details_innear">
+          <div>
+            <h3>withdrawal amount</h3>
+            <h4 class = "withdrawal_amm">00,00</h4>
+          </div>
+
+          <div>
+            <h3>total bets played</h3>
+            <h4 class = "bets_played">0</h4>
+          </div>
+
+          <div>
+            <h3>members invited</h3>
+            <h4 class="members_invited">00</h4>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="pc_withdrawal">
+        <span id="pc_W">WITHDRAWAL</span>
+        <span id="pc_D">DEPOSITE</span>
+      </div>
+
+      <section class="Pc_deposite">
+        <ion-icon name="close"></ion-icon>
+        <div class="Pc_innear_dep">
+          <div>
+            <h4>Available balance</h4>
+            <h5>
+              <pre> ₹ </pre>
+              <p class = 'balance'>000</p>
+            </h5>
+          </div>
+          <div class="Pc_dep_amount">
+            <h4>Add amount</h4>
+            <input type="number" placeholder="add amount">
+          </div>
+          <span>
+            <button id="Pc_add">Add</button>
+          </span>
+        </div>
+      </section>
+
+      <!-- -----------------------------------------------creating the footer------------------------------------------ -->
+
+      <div id='footer'>
+
+        <div>
+          <ion-icon name="home-outline"></ion-icon>
+          <a href="home">
+            <h5>HOME</h5>
+          </a>
+        </div>
+
+        <div>
+          <ion-icon name="refresh-sharp"></ion-icon>
+          <a href="history">
+            <h5>history</h5>
+          </a>
+        </div>
+
+        <div id="footer-crown" class="footer-crown crown-added">
+
+          <h3><ion-icon name="add-outline"></ion-icon></h3>
+
+
+        </div>
+
+        <div>
+          <ion-icon name="newspaper-outline"></ion-icon>
+          <a href="result">
+            <h5>RESULT</h5>
+          </a>
+        </div>
+
+        <div>
+          <ion-icon name="person-outline"></ion-icon>
+          <a href="profile">
+            <h5>PROFILE</h5>
+          </a>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ---------------------------withdrawal page and deposite page ------------------------------------------------------------------------------------- -->
+
+    <main class="withdrawals">
+      <div class="withdrawals_in">
+        <label class="switch">
+          <input type="checkbox" class="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <ion-icon name="close"></ion-icon>
+      </div>
+
+      <section class="withdrawal">
+        <!-- ------------------------switch system for withdrawal and deposite page ------------------------- -->
+
+        <div class="with">
+          <div class="winning_amount">
+            <h4>Your Winning Amount</h4>
+            <h5 class = "withdrawal_amm">00,00</h5>
+          </div>
+          <div class="payment_method">
+            <div class="bank">
+              <div class="account">
+                <span>
+                  <ion-icon name="person"></ion-icon>
+                  <p>Bank Account</p>
+                </span>
+                <input type="radio" name="bank" id="radio_btn1" class="radio_btn">
+              </div>
+              <div class="account">
+                <span>
+                  <ion-icon name="person"></ion-icon>
+                  <p>UPI Id</p>
+                </span>
+                <input type="radio" name="bank" id="radio_btn2" class="radio_btn">
+              </div>
+            </div>
+            <div class="withdrawal_footer">
+              <div>
+                <p>enter your wiining amount</p>
+                <input id="w_amount" type="number" placeholder="1rs">
+              </div>
+              <p>minimum withdrawal amount only 1rs</p>
+            </div>
+            <div class="btn">
+              <button>withdrawal</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="deposite">
+        <div class="innear_dep">
+          <div>
+            <h4>Available balance</h4>
+            <h5>
+              <pre> ₹ </pre>
+              <p class = "balance">000</p>
+            </h5>
+          </div>
+          <div class="dep_amount">
+            <h4>Add amount</h4>
+            <input type="number" placeholder="add amount">
+          </div>
+          <span>
+            <button id="add">Add</button>
+          </span>
+        </div>
+      </section>
+    </main>
+
+    <!-- ---------------------------------------------------- creating the setting page -------------------------------------------------- -->
+    <main class="setting">
+        <div class="header">
+          <span class="logo"></span>
+          <h3>
+            <p>₹ <label class = "balance">00,000</label></p>
+            <span class="notification"><ion-icon name="notifications"></ion-icon></span>
+          </h3>
+        </div>
+      <h3><ion-icon name="arrow-back"></ion-icon></h3>
+      <h2>setings</h2>
+      <div class="setting_opp">
+
+        <div>
+          <div>
+            <i class="fa fa-user"></i>
+          </div>
+          <p id="p">profile</p>
+        </div>
+
+
+        <div>
+          <div>
+            <i class="fa fa-bank"></i>
+          </div>
+          <p id="b">add bank</p>
+        </div>
+
+
+        <div>
+          <div class="u">
+            <img src="../PHOTOS/bhim.png" alt="" class="upi">
+          </div>
+          <p id="a">add upi</p>
+        </div>
+
+
+        <div>
+          <div>
+            <i class="fa fa-phone"></i>
+          </div>
+          <p id="c">contact us</p>
+        </div>
+      </div>
+
+      <!-- --------------------------------------- profile page edit ------------------------------------------------------------------------- -->
+
+      <div class="pro_det">
+        <div class="s_pro">
+          <h3>profile</h3>
+        </div>
+        <div class="pro_edit">
+          <div>
+            <input type="text" placeholder="Your Name" id="one" class="same prof_data">
+            <ion-icon name="pencil-outline" id="one" class="sams"></ion-icon>
+          </div>
+
+          <div>
+            <input type="password" placeholder="password" id="two" class="same prof_data">
+            <ion-icon name="pencil-outline" id="two" class="sams"></ion-icon>
+          </div>
+
+          <div>
+            <input type="email" placeholder="E-mail id" id="three" class="same prof_data">
+            <ion-icon name="pencil-outline" id="three" class="sams"></ion-icon>
+          </div>
+
+          <div>
+            <input type="text" placeholder="withdrawal code" id="four" class="same prof_data">
+            <ion-icon name="pencil-outline" id="four" class="sams"></ion-icon>
+          </div>
+          <span>
+            <p id="prof_data_submit"><ion-icon name="arrow-forward-outline"></ion-icon></p>
+          </span>
+        </div>
+      </div>
+
+      <!-- ------------------ bank editing page ------------------------------------------------------------------------- -->
+
+      <div class="bank_det">
+        <div class="s_bank">
+          <h3> bank details </h3>
+        </div>
+
+        <div class="pro_edit">
+          <div>
+            <input type="text" placeholder="bank Name" id="one" class="same bank_data">
+            <ion-icon name="pencil-outline" id="one" class="sams"></ion-icon>
+          </div>
+
+          <div>
+            <input type="number" placeholder="your account number" id="two" class="same bank_data">
+            <ion-icon name="pencil-outline" id="two" class="sams"></ion-icon>
+          </div>
+
+          <div>
+            <input type="text" placeholder="ifsc code" id="three" class="same bank_data">
+            <ion-icon name="pencil-outline" id="three" class="sams"></ion-icon>
+          </div>
+
+          <div>
+            <input type="text" placeholder="Your Name" id="four" class="same bank_data">
+            <ion-icon name="pencil-outline" id="four" class="sams"></ion-icon>
+          </div>
+          <span>
+            <p id = "bank_data_submit"><ion-icon name="arrow-forward-outline"></ion-icon></p>
+          </span>
+        </div>
+      </div>
+
+      <!-- --------------------------- creating the upi page -------------------------------------------------------------------------------- -->
+      <div class="upi_page">
+        <div class="s_upi">
+          <div class="s_bank upis">
+            <h3> add upi id </h3>
+          </div>
+          <span><ion-icon name="add-outline" id="upi_add"></ion-icon></span>
+        </div>
+      </div>
+
+      <!-- --------------------------- creating the contact us page ------------------------------------------------------------------------------------------------------ -->
+
+
+
+
+      <div class="contact_page">
+        <div>
+          <p>users can contact us through these numbers</p>
+          <p>7717759984</p>
+          <p>9711170546</p>
+        </div>
+      </div>
+    </main>
+
+
+    <section class="pc">
+
+      <div class="area">
+
+      </div>
+
+      <div class="pc_header">
+
+      </div>
+
+      <nav class="main-menu">
+        <ul>
+          <li class="has-subnav">
+            <a href="home">
+              <ion-icon name="home-outline" role="img" class="md hydrated" aria-label="home outline"></ion-icon>
+              <span class="nav-text">
+                HOME
+              </span>
+            </a>
+
+          </li>
+          <li class="has-subnav">
+            <a href="history">
+              <ion-icon name="refresh-sharp" role="img" class="md hydrated" aria-label="refresh sharp"></ion-icon>
+              <span class="nav-text">
+                BET HISTORY
+              </span>
+            </a>
+
+          </li>
+          <li class="has-subnav">
+            <a href="result">
+              <ion-icon name="newspaper-outline" role="img" class="md hydrated"
+                aria-label="newspaper outline"></ion-icon>
+              <span class="nav-text">
+                RESULT
+              </span>
+            </a>
+
+          </li>
+          <li>
+            <a href="profile">
+              <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon>
+              <span class="nav-text pc_pro">
+                PROFILE
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="settings">
+              <i class="fa fa-cogs fa-2x"></i>
+              <span class="nav-text">
+                SETTING
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </section>
+
+
+  </section>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

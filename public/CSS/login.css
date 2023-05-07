@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Explora&family=Unbounded:wght@400;500&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Raleway, sans-serif;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+	background: linear-gradient(90deg, #C7C5F4, #776BCC);
+  font-family: 'Josefin Sans', sans-serif;
+  background: url('../PHOTOS/luck4.png')top no-repeat;
+  background-size: cover;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.company-name{
+  font-family: 'Unbounded', cursive;
+  color : #6262a5;
+  letter-spacing: 1.6px;
+  font-size: 22px;
+  text-align: start;
+}
+.company-animation{
+  animation: logo_translate 1.5s ease-in-out forwards;
+}
+@keyframes india_fade{
+  0%{
+    opacity: 1;
+  }100%{
+    opacity: 0;
+  }
+}
+
+@keyframes logo_translate {
+  0%{
+    margin-left : -50vw;
+  }100%{
+    margin-left: 0vw;
+  }
+}
+
+.screen {
+	background: linear-gradient(90deg, #5D54A4, #7C78B8);
+	position: relative;
+	height: 600px;
+	width: 360px;
+  border-radius: 40px;
+	box-shadow: 0px 0px 24px #5C5696;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;
+	height: 100%;
+  overflow: hidden;
+}
+
+.screen__background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;
+	top: -50px;
+	right: 120px;
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: #6C63AC;
+	top: -172px;
+	right: 0;
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #5D54A4, #6A679E);
+	top: -24px;
+	right: 0;
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #7E7BB9;
+	top: 420px;
+	right: 50px;
+	border-radius: 60px;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 110px;
+}
+
+.login__field {
+	padding: 20px 0px;
+	position: relative;
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #7875B5;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #4C489D;
+	box-shadow: 0px 2px 2px #5C5696;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #6A679E;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875B5;
+}
+
+.social-login , .social-contact{
+	position: absolute;
+	height: 140px;
+	width: 160px;
+	text-align: center;
+	bottom: 0px;
+	right: 5px;
+	color: #fff;
+}
+
+.social-contact{
+  left : 0px;
+}
+
+.social-login > h3:hover , .social-contact > h3:hover{
+  transform: scale(1.025); 
+}
+
+.social-login  > h3,.social-contact > h3{
+  color: #2333a5;
+  background: white;
+  padding: 0.2rem;
+  transform: all ease-in-out;
+  margin-right: 10px;
+  border: 1px solid #a5a2c5;
+  box-shadow: 2px 2px 4px;
+  border-radius: 100vw;
+  
+}
+.social-contact > h3{
+  margin-left: 10px;
+}
+
+
+
+/* ------------creating the india and logo box----------- */
+
+.box-india , .box-logo{
+  height: 100%;
+  width:100%;
+  position: absolute;
+  backdrop-filter: blur(11px);
+  left : 0;
+  top : 0;
+  z-index: 2;
+  background-image: url(../PHOTOS/INDIA.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 65%;
+  display: flex;
+  filter: drop-shadow(2px 12px 8px black);
+  justify-content: center;
+}
+
+ .box-logo{
+    background :transparent;
+ }
+
+.box-india-floter{
+  background: rgb(222, 220, 220);
+  padding : 0.25rem 1rem;
+  filter: drop-shadow(0 0 4px white);
+  max-height: 2rem;
+  color : #4a3e3e;
+  margin-top: 80vh;
+  border-radius: 100vw;
+  animation: india-popup 1.5s ease-in-out;
+}
+
+@keyframes india-popup{
+
+  0%{
+    margin-top: 150vh;
+  }70%{
+    margin-top: 100vh;
+  }80%{
+    margin-top: 90vh;
+  }85%{
+    margin-top: 80vh;
+  }87%{
+    margin-top: 81vh;
+  }89%{
+    margin-top: 79vh;
+  }90%{
+    margin-top: 80vh;
+  }95%{
+    margin-top: 81vh;
+  }97%{
+    margin-top : 79vh;
+  }
+  100%{
+    margin-top: 80vh;
+  }
+
+}
+
+.box-logo{
+  /* background: linear-gradient(45deg, #c9bebe, #04040447); */
+  display: grid;
+  place-content: center;
+  z-index: 1;
+}
+
+.box-logo > h3{
+  border-radius: 100%;
+  height: 10rem;
+  font-family: 'Explora', cursive;
+  font-family: 'Unbounded' , cursive;
+  font-weight: 500;
+  color : #2c7c9b;
+  background : whitesmoke;
+  width: 10rem;
+  display: grid;
+  place-content: center;
+  text-align: start;
+  box-shadow: inset -5px -1px 7px #afafaf, -2px -2px 6px;
+}
+
+
+/* /////////////////////////////////   signup page          ///////////////////////////////////////////////////////////////////////// */
+.sign{
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+}
+@keyframes signup {
+  0%{
+    margin-left : -50vw;
+  }100%{
+    margin-left: 0vw;
+  }
+}
+.sign > h1{
+  display: block;
+  width: max-content;
+  margin-top: 10rem;
+  margin-left: 2rem;
+  padding-right: 1.5rem;
+  padding-top: .1rem;
+  padding-bottom: .3rem;
+  border-bottom: 2px solid black;
+  border-color: blueviolet;
+}
+.sign_content{
+  margin: 2rem 0 0 0;
+  min-height: 45vh;
+  padding: 1rem;
+}
+.sign_content > .forms{
+  padding: 1rem;
+}
+.forms > ion-icon{
+  font-size: 2.2rem;
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  color:rgb(97, 94, 94);
+}
+.forms > input{
+  color: black;
+  font-weight: 700;
+  border: none;
+  border-bottom: 1px solid  rgb(97, 94, 94);
+  background: transparent;
+  width: 90%;
+  margin-left: 1rem;
+  padding: 1.5rem  0;
+  padding-left: 3rem;
+  outline: none;
+}
+
+::placeholder{
+  color: rgb(97, 94, 94);
+}
+.sign_footer{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: 90%;
+  display: flex;
+  justify-content: end;
+}
+.sign_footer > p{
+  color: snow;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  margin-right: 4rem;
+  background: linear-gradient(to right , rgb(191, 172, 212) , blueviolet);
+  box-shadow: 4px 1px 4px 0px #b4adad;
+}
+input:focus{
+  transition: all 0.3s ease-in-out;
+  border-bottom:2px solid #665590;
+}

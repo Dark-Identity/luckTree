@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="login , luck tree , lottery , prediction">
+  <meta name="description" content="luck tree login signup page">
+  <meta name="author" content="Rahul vishwakarma">
+  <link rel="stylesheet" href="../CSS/login.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
+  <title>LOGIN</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="screen">
+      <div class="screen__content">
+        <form class="login">
+          <h3 class="company-name">LUCK TREE</h3>
+          <div class="login__field">
+            <i class="login__icon fas fa-user" style="font-size: 1.6rem;"></i>
+            <input type="text" class="login__input login_inpt" placeholder="User name / Email">
+          </div>
+          <div class="login__field">
+            <i class="login__icon fas fa-lock" style="font-size: 1.6rem;"></i>
+            <input type="password" class="login__input login_inpt" placeholder="Password">
+          </div>
+          <button class="button login__submit" id="login_btn">
+            <span class="button__text">Log In Now</span>
+            <i class="button__icon fas fa-chevron-right"></i>
+          </button>
+        </form>
+        <div class="social-login">
+          <h3>CREATE ACCOUNT</h3>
+          </a>
+        </div>
+        <div class="social-contact">
+          <h3>CONTACT US</h3>
+        </div>
+      </div>
+      <div class="screen__background">
+        <span class="screen__background__shape screen__background__shape4"></span>
+        <span class="screen__background__shape screen__background__shape3"></span>
+        <span class="screen__background__shape screen__background__shape2"></span>
+        <span class="screen__background__shape screen__background__shape1"></span>
+      </div>
+    </div>
+
+    <div class="box-india">
+      <h3 class="box-india-floter">TAP TO LOGIN</h3>
+    </div>
+    <div class="box-logo">
+      <h3>LUCK TREE</h3>
+    </div>
+
+  </div>
+  <!-- //////////////// sign up  ////////////////////////////////////// -->
+  <main>
+    <div class="sign">
+      <h1>Register</h1>
+      <div class="sign_content">
+        <div class="forms">
+          <ion-icon name="person"></ion-icon>
+          <input class = "sign_inpt" type="text" name=""  placeholder="Name">
+        </div>
+        <div class="forms">
+          <ion-icon name="mail"></ion-icon>
+          <input class = "sign_inpt" type="email" name=""  placeholder="Email">
+        </div>
+        <div class="forms">
+          <ion-icon name="key"></ion-icon>
+          <input class = "sign_inpt" type="password" name=""  placeholder="Password">
+        </div>
+        <div class="forms">
+          <ion-icon name="key"></ion-icon>
+          <input class = "sign_inpt" type="password" name=""  placeholder="Confirm Password">
+        </div>
+        <div class="forms">
+          <ion-icon name="person"></ion-icon>
+          <input class = "sign_inpt" value="{{inv_code}}" type="number" name="inv-code"  placeholder="Referal code">
+        </div>
+      </div>
+      <div class="sign_footer" id="signup_btn">
+        <p><a style = "text-decoration : none ; color : rgb(230, 230, 230);" i class="fa fa-long-arrow-right"></a></p>
+      </div>
+      <h3 style="padding-top: 2rem;">Already have An Account ? <br> <a  id="signback">Login here</h3>
+
+    </div>
+  </main>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script type="text/javascript">
+    
+    document.querySelector('#signup_btn').addEventListener('click' , async (e)=>{
+    
+       e.target.disabled = true;
+       let values = document.querySelectorAll('.sign_inpt');
+       let NAME = values[0].value;
+       let EMAIL = values[1].value;
+       let PASS = values[2].value;
+       let cnfPASS = values[3].value;
+       let INV = values[4].value;
+
+      if(!NAME || NAME == undefined ||
+         !EMAIL || EMAIL == undefined ||
+         !PASS || PASS == undefined 
+      ){
+        alert('FILL ALL THE DETAILS !');
+        return;
+      }else if(PASS.localeCompare(cnfPASS) !== 0){
+        alert('PASSWORD NOT MATCHED!');
+        return;
+      }else{
+        INV = (!INV || INV == undefined)? 0 : INV;
+        let data = {NAME , EMAIL,PASS, INV};
+       
+        let config = {
+          method : 'POST',
+          headers : {
+            'content-type' : 'application/json'
+          },
+          body : JSON.stringify(data)
+        }
+          let res = await fetch('/signup' , config);
+          res = await res.json();
+
+          if(res['status'] == 1){
+            window.location.href = window.location.origin + '/home';
+          }else{
+            alert(res['status']);
+            window.location.reload();
+          }
+      };
+
+
+    })
+    
+    document.querySelector('#login_btn').addEventListener('click' , async (e)=>{
+       e.target.disabled = true;
+      let values = document.querySelectorAll('.login_inpt');
+      let NAME = values[0].value;
+      let PASS = values[1].value;
+      console.log(NAME , PASS)
+      if (!NAME || NAME == undefined ||
+        !PASS || PASS == undefined 
+      ) {
+        alert('FILL ALL THE DETAILS !');
+        return;
+      }else {
+        let data = { NAME, PASS };
+        let config = {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        }
+          let res = await fetch('/login', config);
+          res = await res.json();
+
+          if (res['status'] == 1) {
+            window.location.href = window.location.origin + '/home';
+          } else {
+            alert(res['status']);
+            window.location.reload();
+          }
+      };
+
+    })
+
+    let india_box = document.querySelector('.box-india')
+    india_box.addEventListener('click', () => {
+
+      india_box.style.animation = 'india_fade 2.5s ease-in forwards';
+
+      setTimeout(function () {
+        india_box.style.display = 'none';
+        document.querySelector('.box-logo').style.animation = 'india_fade 1.7s ease-in-out forwards';
+      }, 2500);
+
+      setTimeout(function () {
+        document.querySelector('.box-logo').style.display = 'none';
+        document.querySelector('.company-name').classList.add('company-animation');
+      }, 3000);
+
+    })
+    let login = document.querySelector('.container');
+    document.querySelector('.social-login > h3').addEventListener('click', () => {
+      login.style.display ="none";
+      document.querySelector('main').style.animation = 'signup .5s ease-in-out forwards';
+      document.querySelector('main').style.display = 'block';
+    });
+    document.querySelector('#signback').addEventListener('click', ()=>{
+     document.querySelector('main').style.display = "none";
+     login.style.display = "block";
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+        if (window.location.href.search('id') !== -1) {
+          document.querySelector('input[name = "inv-code"]').disabled = true;
+           document.querySelector('.social-login > h3').click();
+        }
+      })
+
+    
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+#footer {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 2.5%;
+    width: 95%;
+    height: 60px;
+    z-index: 10;
+    background: #f8f8f8;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 100vw;
+    box-shadow: 0 0 10px grey;
+}
+
+#footer>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#footer>div>ion-icon {
+    font-size: 25px;
+    margin-bottom: 0.1rem;
+}
+
+#footer>div>a>h5 {
+    color: blue;
+}
+
+#footer>div>a {
+    text-decoration: none;
+}
+
+.footer-crown {
+    display: none !important;
+}
+
+.updated-footer {
+    grid-template-columns: repeat(5, 1fr) !important;
+}
+
+#footer>a {
+    display: block;
+}
+
+
+.crown-added {
+    border-radius: 100%;
+    box-shadow: 0 0 10px -3px grey;
+    transform: translateY(-40%);
+    background: white;
+}
+
+@media screen and (max-height: 667px) {
+    .win {
+        height: 45%;
+        margin-bottom: 1rem;
+    }
+
+    .bet_history_body {
+        margin-top: 3.5rem;
+        height: calc(100% - 150px);
+    }
+
+    .win_body {
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-height: 667px) {
+    .wins_loss {
+        color: black;
+    }
+}
+
+/* ------------ footer for pc------------ */
+
+.fa-2x {
+    font-size: 2em;
+}
+
+a>ion-icon {
+    width: 60px;
+    height: 36px;
+}
+
+.fa {
+    position: relative;
+    display: table-cell;
+    width: 60px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 23px;
+}
+
+.main-menu,
+nav.main-menu {
+    width: 200px;
+    overflow: visible;
+}
+
+.main-menu {
+    background: #8359b9;
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    width: 60px;
+    overflow: hidden;
+    z-index: 5;
+
+}
+
+.main-menu>ul {
+    margin: 3.13rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.main-menu li {
+    position: relative;
+    border-bottom: 2px solid rgb(221, 216, 216);
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 7px;
+}
+
+.main-menu li>a {
+    position: relative;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: black;
+    font-family: arial;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: start;
+    text-transform: uppercase;
+    /* -webkit-transform:translateZ(0) scale(1,1); */
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+.main-menu .nav-icon {
+    position: relative;
+    display: table-cell;
+    width: 60px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.main-menu .nav-text {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    width: 190px;
+    font-family: "Titillium Web", sans-serif;
+}
+
+.main-menu>ul.logout {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.no-touch .scrollable.hover {
+    overflow-y: hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+    overflow-y: auto;
+    overflow: visible;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+nav {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+nav ul,
+nav li {
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.area {
+    float: left;
+    background: #e2e2e2;
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Titillium WebLight"), local("TitilliumWeb-Light"),
+        url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format("woff");
+}
+
+.main-menu li .nav-text {
+    padding: 0 0.25rem;
+}
+
+.main-menu li:hover .nav-text {
+    background-color: white;
+    color: black;
+    border-bottom-left-radius: 10px;
+}
+
+.main-menu li i {
+    background: #8d66be;
+}
+
+.main-menu::after {
+    content: "";
+    height: 6.3rem;
+    width: 6.3rem;
+    background-color: white;
+    position: absolute;
+    top: -3.6rem;
+    left: 1.1rem;
+    background: url(../PHOTOS/LOGO.png) center no-repeat;
+        background-size: contain;
+    border-radius: 100%;
+}
+
+
+/* -----------------pc media query ----------------0 */
+@media screen and (min-width: 490px) {
+    #footer {
+        display: none;
+    }
+
+    .header>span {
+        scale: 0;
+    }
+
+    .bet_history_body {
+        width: calc(100% - 240px);
+        margin-left: 220px;
+    }
+
+    .win {
+        height: 55%;
+    }
+
+    .history_header div:nth-child(2) {
+        top: 10px;
+        right: -130px;
+    }
+
+    .history_header div:nth-child(3) {
+        top: 35px;
+        right: 7px;
+    }
+
+    .history_header div:nth-child(4) {
+        top: 65px;
+        right: 80px;
+    }
+
+    .products>div {
+        background: none;
+    }
+}
+
+@media screen and (max-width:1024px) and (min-width:650) {
+    .items {
+        width: 10%;
+        height: 50%;
+    }
+}
+
+/* -------------- phone media query ------------ */
+
+@media screen and (max-width: 490px) {
+    .main-menu {
+        display: none;
+    }
+}
+
+.pc_histo {
+    background-color: white;
+    border-radius: 0 0 0 .7rem;
+}

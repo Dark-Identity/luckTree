@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow-y: hidden;
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    background: url('../PHOTOS/luck4.png')top no-repeat;
+    background-size: cover;
+    text-align: center;
+    text-decoration: none;
+
+}
+.sign{
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+.sign > h1{
+    display: block;
+    width: max-content;
+    margin-top: 10rem;
+    margin-left: 2rem;
+    padding-right: 1.5rem;
+    padding-top: .1rem;
+    padding-bottom: .3rem;
+    border-bottom: 2px solid black;
+    border-color: blueviolet;
+}
+.sign_content{
+    margin: 2rem 0 0 0;
+    min-height: 45vh;
+    padding: 1rem;
+}
+.sign_content > .forms{
+    padding: 1rem;
+}
+.forms > ion-icon{
+    font-size: 2.2rem;
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color:rgb(97, 94, 94);
+}
+.forms > input{
+    color: black;
+    font-weight: 700;
+    border: none;
+    border-bottom: 1px solid  rgb(97, 94, 94);
+    background: transparent;
+    width: 90%;
+    margin-left: 1rem;
+    padding: 1.5rem  0;
+    padding-left: 3rem;
+    outline: none;
+}
+
+::placeholder{
+    color: rgb(97, 94, 94);
+}
+.sign_footer{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+.sign_footer > p{
+    color: snow;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    margin-right: 4rem;
+    background: linear-gradient(to right , rgb(191, 172, 212) , blueviolet);
+    box-shadow: 4px 1px 4px 0px #b4adad;
+}
+input:focus{
+    transition: all 0.3s ease-in-out;
+    border-bottom:2px solid #665590;
+}

@@ -1,0 +1,106 @@
+/* -----------HEADER STYLINGS-------------- */
+.history_page {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.history_header {
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #8359b9;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0px 3px 5px 0px rgba(22, 18, 18, 0.934);
+
+}
+
+.header>span {
+    border: 1px solid;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin-left: 20px;
+}
+.logo{
+    background: url(../PHOTOS/LOGO.png) center no-repeat;
+    background-size: contain;
+}
+
+.header>h3 {
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background-color: snow;
+    box-shadow: 0 0 10px 0px grey;
+    margin-right: 1.15rem;
+}
+
+.header>h2>p {
+    color: rgb(54, 5, 103);
+}
+
+.history_header div:nth-child(2) {
+    position: absolute;
+    top: -15%;
+    right: -30%;
+    width: 10rem;
+    height: 12rem;
+    border-radius: 2.5rem;
+    rotate: 25deg;
+    background-color: #1814d0;
+    z-index: -1;
+}
+.header > h2 , .header > h3{
+    display: flex;
+    align-items: center;
+}
+
+.notification{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.notification > ion-icon::after{
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    top : 0; 
+    right : 0;
+    border-radius: 100%;
+    background-color: rgb(252, 36, 36);
+}
+.notification > ion-icon{
+  color : #8d66be;
+  margin-left : 1rem;
+}
+
+.history_header div:nth-child(3) {
+    position: absolute;
+    top: 35%;
+    right: 7%;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3.2rem;
+    background-color: #ad1f85;
+    z-index: -1;
+}
+
+.history_header div:nth-child(4) {
+    position: absolute;
+    top: 65%;
+    right: 25%;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3.5rem;
+    background-color: #11c6d1;
+    z-index: -1;
+}
+
+/* --------------HEADER STYLING DONE----------- */
+

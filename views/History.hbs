@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>history page</title>
+    <meta name="keywords" content="History , luck tree , lottery , prediction">
+    <meta name="description" content="luck tree history page history of tickets">
+    <meta name="author" content="Rahul vishwakarma">
+    <link rel="stylesheet" href="../CSS/his.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <section class="history_page">
+
+        <!-- --------------------- creating the header for the result page ----------------------------------------------------------------------- -->
+    <div class="history_header">
+        <div class="header">
+            <span class="logo"></span>
+            <h3>
+                <p>₹ <label class = 'balance'>00,00000</label></p>
+            </h3>
+        </div>
+    
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+        <!------------------------- creating the main body of the bet history page --------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="bet_history_body">
+            <div class="bet_history">
+                <h2 style="text-transform : uppercase">your bet history</h2>
+                <div class="win_body">
+                   
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--  ---------- creating the new footer - ------ -->
+        <div id='footer'>
+
+            <div>
+                <ion-icon name="home-outline"></ion-icon>
+                <a href="home">
+                    <h5>HOME</h5>
+                </a>
+            </div>
+
+            <div>
+                <ion-icon name="refresh-sharp"></ion-icon>
+                <a href="history">
+                    <h5>HISTORY</h5>
+                </a>
+            </div>
+
+            <!-- this div will represent the rupee button -->
+            <!-- <div id="footer-crown" class="footer-crown crown-added">
+                <ion-icon name="close"></ion-icon>
+                <a>HOME</a>
+            </div> -->
+
+            <div>
+                <ion-icon name="newspaper-outline"></ion-icon>
+                <a href="result">
+                    <h5>RESULT</h5>
+                </a>
+            </div>
+
+            <div>
+                <ion-icon name="person-outline"></ion-icon>
+                <a href="profile">
+                    <h5>PROFILE</h5>
+                </a>
+            </div>
+
+        </div>
+
+        <!------------ footer for pc ------------- -->
+ 
+        <nav class="main-menu">
+            <ul>
+                <li class="has-subnav">
+                    <a href="home">
+                        <ion-icon name="home-outline" role="img" class="md hydrated"
+                            aria-label="home outline"></ion-icon>
+                        <span class="nav-text">
+                            HOME
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="history">
+                        <ion-icon name="refresh-sharp" role="img" class="md hydrated"
+                            aria-label="refresh sharp"></ion-icon>
+                        <span class="nav-text pc_histo">
+                            BET HISTORY
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="result">
+                        <ion-icon name="newspaper-outline" role="img" class="md hydrated"
+                            aria-label="newspaper outline"></ion-icon>
+                        <span class="nav-text">
+                            RESULT
+                        </span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="profile">
+                        <ion-icon name="person-outline" role="img" class="md hydrated"
+                            aria-label="person outline"></ion-icon>
+                        <span class="nav-text">
+                            PROFILE
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings">
+                        <i class="fa fa-cogs fa-2x"></i>
+                        <span class="nav-text">
+                            SETTING
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+
+
+
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <script>
+
+        function create_data(data){
+        let parent = document.querySelector('.win_body');
+          data.forEach((element , i)=>{
+            let child = document.createElement('div');
+            child.classList.add('win');
+            child.innerHTML = `
+                        <span>
+                            <h4>date : ${element['DATE']}</h4>
+                            <h4>time : ${element['TIME']}</h4>
+                        </span>
+                        <div class="products">
+                            <div class="bet_one">
+                                <div class="bet_one_f">
+                                    <div class="descrp">
+                                        <p>
+                                            ${element['DESCRIPTION']}
+                                        </p>
+                                    </div>
+                                    <div class="items" style = 'background-image : url(${element["IMAGE"]})' alt : 'image not found'>
+                                    </div>
+                                </div>
+                                <div class="wins_loss">
+                                    <h3>${element['RESULT']}</h3>
+                                </div>
+                            </div>
+                        </div>`
+            parent.appendChild(child);
+          })
+        }
+
+       (async function get_data(){
+          let res = await fetch('/get_bet_data');
+          res = await res.json();
+          
+          if(res['status'] === 1){
+            create_data(res['setteled_bets'])
+          }else{
+            window.location.href = window.location.origin + '/login';
+          }
+
+       })(); 
+         window.addEventListener('load', async () => {
+                let user_data = await fetch('/user_data');
+                user_data = await user_data.json();
+                if (user_data['status'] === 2 || user_data['status'] === 3) {
+                    //  window.location.href = window.location.origin + '/login';
+                } else {
+
+                    let balance = document.querySelectorAll('.balance');
+                    balance.forEach((ele) => {
+                        ele.innerText = user_data['BALANCE'];
+                    })
+
+                }
+            })       
+    </script>
+
+</body>
+
+</html>

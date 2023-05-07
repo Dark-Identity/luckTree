@@ -1,0 +1,119 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f3f3f3;
+}
+
+.success{
+    background-color: lime;
+}
+.pending{
+    background-color: #ffb100;
+}
+.canceled{
+    background-color: #ff0800;
+}
+
+.main_box{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    height: 100dvh;
+    width : 100dvw;
+}
+.funds_title{
+    margin-top: 2.5rem;
+    margin-left: -0.2rem;
+    border-top-right-radius: 100vw;
+    border-bottom-right-radius: 100vw;
+    background : #9869d5;
+    color : white;
+    padding : 0.5rem 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px -3px grey;
+    width: fit-content;
+    text-transform: capitalize;;
+}
+
+
+/* ----------notification card ----------- */
+.funds_content{
+    height: (calc(100vh - 10rem));
+    height: calc(100dvh - 10rem);
+    overflow-y: scroll;
+    padding-bottom: 100px;
+}
+.notification_card{
+    display: flex;
+    flex-direction: column;
+ 
+    box-shadow: 0 0 10px -3px grey;
+    border-radius: 10px;
+    overflow: hidden;
+    width : 95%;
+    background-color: rgb(247, 238, 238);
+    color : #1a1818;
+    margin : 1rem auto;
+}
+
+.notification_card:first-child{
+    margin-top: 2rem;
+}
+
+.notification_card > .topic_status{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
+    padding : 0.25rem 1rem;
+
+    background-color: bisque;
+}
+
+.status_color {
+    height : 1rem;
+    width  : 1rem;
+    border-radius: 100%;
+    box-shadow: 0 0 5px -2px gray;
+}
+
+.topic_status > div{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    column-gap: 0.5rem;
+    padding: 0 0.5rem;
+}
+.topic_status > div > h4{
+    text-transform: uppercase;
+}
+
+.card_content{
+    display: flex;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid grey;
+    justify-content: space-between;
+}
+
+.notification_id > div{
+   display: flex;
+   width: fit-content;
+   padding: 0.25rem 1rem;
+   align-items: center;
+}
+.notification_id > div > h4:first-child{
+    padding : 0 0.5rem;
+}
+
+.main-menu{
+    top : 70px !important;
+}
+/* --------------MEDIA QUERRY------------------ */
+
+@media screen and (min-width : 490px) {
+    .funds_title , .funds_content {
+        margin-left: 200px;
+    }
+}

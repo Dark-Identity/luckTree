@@ -1,0 +1,119 @@
+*{
+    margin : 0; 
+    padding : 0;
+    box-sizing: border-box;
+}
+.header > h2{
+    background-color: white;
+    padding : 0.25rem 0.5rem;
+    margin-right: 1rem;
+    border-radius: 100vw;
+}
+main{
+    height: calc(100vh - 70px);
+    height: calc(100dvh - 70px);
+    overflow-y : scroll;
+    overflow-x : hidden;
+}
+main > div{
+    min-height : calc(100dvh / 3 - 4rem);
+}
+/* -------qr box------- */
+.qr_box{
+    width : 100vw;
+    width : 100dvw;
+}
+
+#qr_container{
+  background : url(../PHOTOS/QR.jpg) center no-repeat;
+  background-size : cover;
+  box-shadow: 0 2px 5px -1px grey;
+  margin : 1rem auto;
+  margin-top : 2rem;
+  height : 10rem;
+  width  : 10rem;
+}
+
+/* --------pay instructions---------- */
+.weird_text{
+    padding : 1rem 0;
+    padding-bottom : 2rem;
+    font-size:1.2rem;
+    font-weight : 300;
+    text-align: center;
+}
+.weird_text > span{
+    color : blueviolet;
+
+}
+.pay_instructions{
+    margin-top : 1rem;
+    width : 100vw;
+    width : 100dvw;
+    /* box-shadow: 0 0 10px -4px grey; */
+    padding : 0 2rem;
+}
+.pay_instructions > h3{
+    position : relative;
+    font-weight : 540;
+}
+.pay_instructions > h3::before{
+  content : "\2688";
+  position : absolute;
+  left : -1.2rem;
+  top : 50%;
+  transform : translateY(-50%);
+  color : #7946bb;;
+}
+
+/* ----------pay submit------- */
+
+.pay_submit_fields{
+    margin-top : 1rem;
+    display: flex;
+    flex-direction : column;
+    padding : 1rem;
+}
+
+.pay_submit_fields > input{
+    outline : none;
+    border : none;
+    font-size : 1rem;
+    /* box-shadow : 0 0 10px -4px grey; */
+    border-bottom : 2px solid blueviolet;
+    margin-top : 0.5rem;
+    padding : 0.5rem 1rem;
+}
+
+.pay_submit_fields>input:nth-child(2) {
+   margin-top : 1rem;
+}
+
+#pay_submit{
+    margin : 1rem auto;
+    padding : 0.6rem 1rem;
+    margin-top : 1.5rem;
+    outline : none;
+    border : none;
+    background : blueviolet;
+    color : white;
+    border-radius : 5px;
+    letter-spacing : 1.4px;
+    font-weight : bold;
+    width : min(40vw , 200px);
+    box-shadow : 0 0 10px -2px grey;
+}
+
+/* ------ pc media query --------*/
+@media screen and (min-width : 510px) {
+   main {
+    display : grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    padding : 0 2rem;
+   }
+   .qr_box , .pay_instructions{
+    width : auto;
+    padding : 0 2rem;
+   }
+}

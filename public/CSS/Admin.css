@@ -1,0 +1,87 @@
+*{
+    margin : 0 ;
+    padding : 0 ;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ebebeb;
+    padding-bottom: 50px;
+}
+
+body > section {
+    background-color: #f5f5f5;
+    width : 95svw;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    margin-inline: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px -3px grey;
+}
+
+section > h3{
+    border-radius: 5px;
+    padding : 0.5rem  0;
+    background-color: aqua;
+}
+section  form  div{
+    display: flex;
+    width: min(84svw , 500px);
+    margin: 0 auto;
+    text-align: start;
+    flex-flow: column;
+}
+section  form  div:first-child{
+    margin-top: 1rem;
+}
+
+input{
+    padding : 0.25rem 1rem;
+    outline: none;
+    border : none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #3f3e3e;
+}
+input:not(input[type='submit']){
+    width: min(50svw, 500px);
+}
+
+input:focus{
+    outline : 2px solid aquamarine;
+    margin : 0.5rem 0;
+}
+
+textarea{
+    padding : 1rem;
+    outline : none;
+    color : #3f3e3e;
+    border : none;
+    border-radius: 5px;
+}
+
+label{
+    text-transform: uppercase;
+    margin-top : 0.5rem;
+    color: #3f3e3e;
+}
+
+input[type='submit']{
+    padding : 0.5rem 1.5rem;
+    background : rgb(16, 243, 167);
+    font-weight: bold;
+    color : #084839;
+    margin-top: 0.5rem;
+
+}
+
+section:last-child>div{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+section:last-child > div > p{
+    padding : 1rem 2rem;
+    height: 3rem;
+    width: 100%;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta type = "keywords" content="Admin page , lucktree">
+    <link rel="stylesheet" href="../CSS/Admin.css">
+    <script defer src="../JS/Admin.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+</head>
+<body>
+
+    <section>
+        <h3>ADD NEW PRODUCTS</h3>
+        <form method="POST" action="/new_product" enctype="multipart/form-data">
+           
+           <div>
+             <label for="">Enter time</label>
+             <input required name = 'time' type="text" placeholder="00:00" />
+           </div>
+           <div>
+             <label for="">Enter the amount</label>
+             <input required name="amount" type="number" />
+           </div>
+            <div>
+                <label for="">Enter the lottery id</label>
+                <input required name="lottery_id" type="number" />
+            </div>
+           <div>
+             <label for="">Enter the description</label>
+             <textarea name="description" id="" cols="30" rows="7"></textarea>
+           </div>
+            
+            <input required type="file" name= 'file' />
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <section>
+        <h3>ADD WINNER PHOTOS</h3>
+        <div>
+            <form action="/winner_upload" method="POST" enctype="multipart/form-data">
+               <div>
+                 <label for="">photo 1.</label>
+                 <input name="file" type="file" required>
+               </div>
+               <input type="submit" value = 'submit'>
+            </form>
+             <form action="/winner_upload" method="POST" enctype="multipart/form-data">
+               <div>
+                 <label for="">photo 2.</label>
+                 <input name="file" type="file" required>
+               </div>
+               <input type="submit" value = 'submit'>
+            </form>
+            <form action="/winner_upload" method="POST" enctype="multipart/form-data">
+              <div>
+                <label for="">photo 3.</label>
+                <input name="file" type="file" required>
+              </div>
+              <input type="submit" value='submit'>
+            </form>
+            <form action="/delete_prev_winner" method="GET">
+              <div>
+                <label for="">DELETE PREVIOUS WINERS</label>
+              <input type="submit" style="color : white ;background-color : rgb(190, 18, 18);" value='DELETE'>
+            </form>
+        </div>
+    </section>
+    <section>
+        <h3>SETTLE LOTTERY</h3>
+        <div>
+           <p id="results">
+
+           </p>
+           <input id="lotery_id" type="number" placeholder="Enter lottery id."/>
+           <input id="settle_lottery" type="submit" value= 'submit'>
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,1045 @@
+@import url("https://fonts.googleapis.com/css2?family=Explora&family=Unbounded:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  font-family: Raleway, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+.profile {
+  position: relative;
+  overflow: hidden;
+}
+.profile_two {
+  width: 100vw;
+  height: 100vh;
+  background: #d9d9d9;
+  position: relative;
+  /* display: none; */
+}
+.round {
+  position: absolute;
+  width: 100%;
+  height: 44%;
+  display: flex;
+  background-color: #8359b9;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+.round > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  background-color: #8359b9;
+  opacity: 0.5;
+}
+.round > h3 {
+  width: 150px;
+  line-height: 40px;
+  border-radius: 30px;
+  background-color: snow;
+  box-shadow: 0px 2px 3px 0px black;
+  align-self: baseline;
+  margin-top: 10px;
+  margin-right: 10px;
+  position: absolute;
+  right: 0;
+}
+.round > h2 > p {
+  color: rgb(54, 5, 103);
+}
+.profile_pic {
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  margin: 0 auto;
+  top: 35%;
+  border-radius: 50%;
+  background-color: #8359b9f8;
+}
+.profile_pic > label {
+  font-size: 4rem;
+  margin: 0 auto;
+}
+.profile_pic > label > ion-icon {
+  margin-top: 1.5rem;
+  color: rgba(118, 110, 110, 0.742);
+}
+.profile_pic > p {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 74%;
+  top: 62%;
+  width: 2.2rem;
+  height: 2rem;
+  border-radius: 100%;
+}
+.profile_pic > p > ion-icon {
+  margin-top: .3rem;
+  color: rgb(93, 88, 88);
+}
+.triangle_one {
+  position: fixed;
+  bottom: -15.7%;
+  left: -15%;
+  overflow: hidden;
+  height: 30%;
+  width: 110%;
+  background: white;
+  transform: rotate(20deg);
+}
+.triangle_two {
+  position: fixed;
+  top: 65%;
+  right: -65%;
+  overflow: hidden;
+  height: 26%;
+  width: 100%;
+  transform: rotate(60deg);
+  background: white;
+}
+.triangle_third {
+  position: fixed;
+  top: 20%;
+  right: -64.5%;
+  overflow: hidden;
+  height: 26%;
+  width: 100%;
+  rotate: 14deg;
+  transform: rotate(14deg);
+  background: white;
+}
+.profile_details {
+  position: relative;
+  height: 64%;
+  top: 19%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.user_details {
+  display: block;
+  color: gray;
+  padding-top: 2rem;
+}
+.user_details > h4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.3rem;
+}
+.user_details > h4 > ion-icon {
+  margin-right: 0.5rem;
+}
+.profile_details_innear{
+  margin-top: 1rem;
+}
+ .profile_details_innear > div {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+  margin: 0 1rem 1rem 1rem;
+  background: #9b8cb3;
+  position: relative;
+  border-bottom-right-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.834);
+}
+.profile_details_innear > div::before {
+  content: "";
+  position: absolute;
+  left: -0.038rem;
+  top: -0.4rem;
+  width: 1.4rem;
+  height: 1rem;
+  rotate: 45deg;
+  background: #9b8cb3;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: 0.1rem;
+  border-top-left-radius: 0.5rem;
+}
+
+/* -------------------------------------------------------- stylling the footer------------------------------------------------------------------------- */
+
+
+#footer {
+  position: absolute;
+  bottom: 4rem;
+  left: 2.5%;
+  width: 95%;
+  height: 63px;
+  z-index: 10;
+  background: #f8f8f8;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-radius: 100vw;
+  box-shadow: 0 0 10px grey;
+  text-transform: uppercase;
+}
+
+#footer > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer > div > a {
+  text-decoration: none;
+}
+#footer > div > ion-icon {
+  font-size: 25px;
+  margin-bottom: 0.1rem;
+}
+
+#footer > div > a > h5 {
+  color: blue;
+}
+#footer > a{
+  display: block;
+}
+
+.footer-crown {
+  border-radius: 100%;
+  box-shadow: 0 0 10px grey;
+  background: white;
+  transform: translateY(-1.5rem);
+  font-size: 1.7rem;
+}
+.footer-crown > h3 > ion-icon {
+  margin-top: 0.5rem;
+}
+
+/* -------------------withdrawal page and  ------------------------------------------------------------------------- */
+
+.profile_two > h3 {
+  position: fixed;
+  top: 45%;
+  left: 0.25rem;
+  font-size: 1.7rem;
+  z-index: 5;
+  color: rgba(0, 0, 0, 0.725);
+}
+.withdrawals {
+  border: 1px solid;
+  overflow: hidden;
+  width: 95vw;
+  position: fixed;
+  top: 15%;
+  left: .6rem;
+  right: .6rem;
+  justify-content: center;
+  align-items: center;
+  height: 60dvh;
+  transform: translateY(200%);
+  transition: all 0.5s ease-in;
+  background-color:#dddddd;
+  color: gray;
+}
+.withdrawal {
+  position: fixed;
+  top: 15%;
+  margin: 0 auto;
+  width: 95%;
+  height: 65%;
+  transition: all 0.5s ease-in;
+}
+.withdrawals_in{
+  height: max-content;
+}
+.withdrawals_in > ion-icon , .Pc_deposite > ion-icon{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  z-index: 2;
+}
+.winning_amount {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+.payment_method {
+  height: 70%;
+}
+.bank {
+  margin-top: 0.2rem;
+  margin: 0 0.3rem;
+}
+.account {
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  border: 1px solid;
+  border-radius: 2rem;
+}
+.account > span {
+  display: flex;
+}
+.account > span > ion-icon {
+  padding: 0 1rem;
+}
+.withdrawal_footer {
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.4rem;
+}
+.withdrawal_footer > div {
+  text-align: start;
+  height: 5rem;
+}
+.withdrawal_footer > div > p {
+  padding-left: 0.5rem;
+}
+.withdrawal_footer > div > input[type="number"] {
+  width: 100%;
+  border-radius: 2rem;
+  height: 2rem;
+  margin-top: 0.4rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  color: rgb(2, 2, 70);
+  font-size: 1.3rem;
+}
+.btn {
+  display: flex;
+  justify-content: end;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+button {
+  width: 6rem;
+  height: 2rem;
+  border: none;
+  background-color: rgba(0, 128, 0, 0.743);
+  color: rgba(255, 255, 255, 0.913);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* -----------------------------------switch system for withdrwal and deposite -------------------------------------------------------------------------------------- */
+
+.switch {
+  position: relative;
+  display: flex;
+  margin: 0.8rem 0 0 0.5rem;
+  width: 60px;
+  height: 75px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgba(0, 128, 0, 0.742);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* -------------------------------- deposite page -------------------------------------------------------------------- */
+.deposite {
+  margin: 0 auto;
+  position: fixed;
+  top: 12%;
+  left: 0.5rem;
+  right: 0.5rem;
+  width: 95%;
+  height: 65%;
+  transition: all 0.5s ease-out;
+  transform: translate(130%);
+}
+
+.innear_dep , .Pc_innear_dep {
+  width: 95%;
+  height: 60%;
+}
+
+.innear_dep > div , .Pc_innear_dep > div{
+  margin-top: 3rem;
+}
+
+.innear_dep > div > h5 , .Pc_innear_dep > div > h5 {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+.dep_amount , .Pc_dep_amount{
+  height: 50%;
+}
+.dep_amount > input , .Pc_dep_amount > input {
+  width: 95%;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid;
+  background-color: #cccccc90;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.innear_dep > span ,.Pc_innear_dep > span {
+  display: flex;
+  justify-content: end;
+  margin-right: .5rem;
+  margin-top: 4rem;
+}
+
+/* -------------------- setting page css ------------------------------------------------------------------------------------------------------------------------- */
+
+.setting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  text-transform: capitalize;
+  transform: translateX(140%);
+  transition: all 0.5s ease-out;
+  background-color: #d9d9d951;
+}
+.profile_two > h4 {
+  position: fixed;
+  top: 40%;
+  left: 0.25rem;
+  font-size: 2rem;
+  z-index: 5;
+  color: rgba(0, 0, 0, 0.725);
+}
+.header {
+  background-color: #8359b9;
+  border-bottom-right-radius: 3.5rem;
+  width: 100%;
+  height: 12%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.header > span {
+  border: 1px solid;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
+}
+.header > h2 {
+  width: 8rem;
+  line-height: 2rem;
+  border-radius: 3rem;
+  background-color: snow;
+  box-shadow: 0px 2px 3px 0px black;
+  align-self: baseline;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+.header > h2 > p {
+  color: rgb(54, 5, 103);
+}
+.header div:nth-child(3) {
+  position: absolute;
+  top: -3%;
+  right: -32%;
+  width: 10rem;
+  height: 12rem;
+  border-radius: 2.5rem;
+  rotate: 25deg;
+  background-color: #1814d0;
+  z-index: -1;
+}
+
+.header div:nth-child(4) {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 3.2rem;
+  background-color: #ad1f85;
+  z-index: -1;
+}
+
+.header div:nth-child(5) {
+  position: absolute;
+  top: 62%;
+  right: 32%;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3.5rem;
+  background-color: #11c6d1;
+  z-index: -1;
+}
+
+.setting > h3 {
+  width: 20%;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.setting > h2 {
+  width: max-content;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+.setting_opp {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  height: 7rem;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+.setting_opp > div > div {
+  border: 1px solid;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.setting_opp div > ion-icon,
+.setting_opp div > i {
+  color: rgba(0, 0, 0, 0.71);
+  font-size: 1.8rem;
+}
+.setting_opp div > img {
+  height: 3rem;
+}
+
+/* ----------------------------------- here setting profile page css ------------------------------------------------------------------------------ */
+.pro_det,
+.bank_det {
+  transition: all 1s ease;
+}
+.pro_det {
+  width: 100%;
+  height: 50%;
+}
+.s_pro,
+.s_bank {
+  width: 35%;
+  padding: 0 1rem 0 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding: 0.4rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.4rem;
+  background-color: #eaca78;
+}
+.s_pro::before,
+.s_bank::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -0.35rem;
+  width: 1rem;
+  height: 0.8rem;
+  rotate: 35deg;
+  background-color: #eaca78;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: 0.1rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.pro_edit {
+  border: 1px solid;
+  padding-bottom: 1rem;
+  padding-top: 0.2rem;
+  border-radius: 3rem;
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.607);
+  position: relative;
+  height: 80%;
+}
+.pro_edit > div > input {
+  width: 85%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  padding-top: 1.3rem;
+  background: none;
+  padding-bottom: 0.5rem;
+}
+.pro_edit > div > ion-icon {
+  font-weight: 900;
+  position: absolute;
+  right: 2rem;
+  padding-top: 1rem;
+}
+
+.pro_edit > div > ::placeholder {
+  color: rgba(0, 0, 0, 0.817);
+  font-weight: 700;
+}
+.pro_edit > span {
+  display: flex;
+  justify-content: end;
+}
+.pro_edit > span > p {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: #8359b9;
+  color: white;
+}
+/* ------------------------ stylng the bank page -------------------------------------------------------------------------------------- */
+
+.bank_det {
+  width: 100%;
+  height: 48%;
+  transition: all 1s ease;
+  transform: translateY(5rem);
+  /* transform: scale(0); */
+}
+
+/* ------------------------ styling the upi page --------------------------------------------------- */
+.upi_page {
+  height: 45%;
+  overflow-y: scroll;
+  padding-bottom: 2rem;
+  transition: all 1s ease-in-out;
+
+}
+.s_upi {
+  position: relative;
+}
+.s_upi > span > ion-icon {
+  border: 1px solid;
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  bottom: -14rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #8359b9;
+  color: white;
+  z-index: 2;
+}
+.upis > input {
+  padding-left: 0.4rem;
+  width: 90%;
+  height: 2rem;
+  margin-top: 0.5rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid;
+ background: none;
+}
+
+.upis > ::placeholder {
+  color: black;
+}
+
+/* ---------------------- styling the contact page  ---------------------------------------------------------------------------------- */
+.contact_page {
+  margin-top: 0.5rem;
+  color: blue;
+  transition: all 1s ease;
+}
+
+/* ----------------------  media query for --------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------- width:-400px and height:- 900px ---------------------------------------------- */
+@media screen and (max-height: 667px) {
+  .profile_pic {
+    width: 6rem;
+    height: 6rem;
+  }
+  .profile_pic > label {
+    font-size: 3rem;
+    margin: 0 auto;
+  }
+
+  .profile_details {
+    position: relative;
+    height: 67%;
+    top: 22%;
+  }
+
+  #footer {
+    bottom: 1rem;
+  }
+}
+
+
+/* ------------ footer for pc------------ */
+
+.fa-2x {
+  font-size: 2em;
+}
+
+li > a > ion-icon {
+  width: 60px;
+  height: 36px;
+}
+
+.fa {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 23px;
+}
+
+.main-menu,
+nav.main-menu {
+  width: 200px;
+  overflow: visible;
+}
+
+.main-menu {
+  background: #8359b9;
+  position: absolute;
+  top: 88px;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 60px;
+  overflow: hidden;
+  z-index: 5;
+
+}
+
+.main-menu > ul {
+  margin: 3.13rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.main-menu li {
+  position: relative;
+  border-bottom: 2px solid rgb(221, 216, 216);
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 7px;
+}
+.main-menu li > a {
+  position: relative;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-family: arial;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: start;
+  text-transform: uppercase;
+  /* -webkit-transform:translateZ(0) scale(1,1); */
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.main-menu .nav-icon {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.main-menu .nav-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 190px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.main-menu > ul.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.no-touch .scrollable.hover {
+  overflow-y: hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+  overflow-y: auto;
+  overflow: visible;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+.pc_pro{
+  background-color: white;
+  border-radius: 0 0 0 .7rem;
+}
+nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+nav ul,
+nav li {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.area {
+  float: left;
+  background: #e2e2e2;
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Titillium WebLight"), local("TitilliumWeb-Light"),
+    url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff)
+      format("woff");
+}
+.main-menu li .nav-text {
+  padding: 0 0.25rem;
+}
+.main-menu li:hover .nav-text {
+  background-color: white;
+  color: black;
+  border-bottom-left-radius: 10px;
+}
+
+.main-menu li i {
+  background:#8359b9;
+}
+.main-menu::after {
+  content: "";
+  height: 6.3rem;
+  width: 6.3rem;
+  background-color: white;
+  position: absolute;
+  top: -3.6rem;
+  left: 1.1rem;
+  border-radius: 100%;
+}
+.pc_header{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color:#8359b9;
+ }
+ .pc_withdrawal{
+  position: absolute;
+  right: 1%;
+  top: 74%;
+  display: flex;
+  flex-direction: column;
+ }
+ .pc_withdrawal > span{
+  margin: .7rem;
+  padding: .7rem;
+  border-radius: .7rem;
+  background:#8e7caa;
+  color: rgba(255, 255, 255, 0.876);
+ }
+
+ 
+/* -------------------------------- deposite page -------------------------------------------------------------------- */
+.Pc_deposite {
+  margin: 0 auto;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 65%;
+  transition: all 0.5s ease-out;
+  background-color: red;
+  transform: translateY(140vh);
+}
+
+
+
+/* -----------------pc media query ----------------0 */
+@media screen and (min-width: 490px){
+  #footer {
+    display: none;
+  }
+  .setting{
+    display: none;
+  }
+  .round {
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    border-radius: 0;
+    height: 150px;   
+  }
+  .round > img {
+    display: none;
+  }
+  .profile_pic {
+    margin: 0 220px;
+    top: 100px;
+    background-color: white;
+  }
+  .user_details {
+   width: 40%;
+   margin-bottom: 2rem;
+  }
+
+  .profile_details {
+    top: 16%;
+    width: 55%;
+    height: 45%;
+    margin-left: 200px; 
+ }
+ 
+.withdrawals {
+  width: calc(100% - 50%);
+  margin-left: 250px;
+  top: 25%;
+  height: 65%;
+  transform: translateY(140vh);
+} 
+
+
+  .slider {
+   display: none;
+}
+}
+
+@media screen and (min-height:1060px){
+  .profile_details {
+    top: -1%;
+    left: 2%;
+ }   
+ .triangle_two {
+  top: 10%;
+  right: -69%;
+  height: 60%;
+  width: 120%;
+}
+
+}
+@media screen  and (height:1024px){
+  
+    .profile_details {
+      top: 1%;
+      left: 2%;
+   }   
+}
+@media screen and (width:500px){
+  
+  .user_details {
+    width: 90%;
+    margin-bottom: 3rem;
+   }
+ 
+   .profile_details {
+     height: 60%;
+  }  
+}
+@media screen and (width:768px) {
+  
+  .user_details {
+    width: 55%;
+   }
+   .triangle_third{
+    display: none;
+    border: 2px solid red;
+   }
+   .triangle_two {
+    top: 50%;
+  }
+ 
+}
+  
+
+/* -------------- phone media query ------------ */
+
+@media screen and (max-width: 490px) {
+  .main-menu {
+    display: none;
+  }
+  .pc_header{
+    display: none;
+  }
+  .pc_withdrawal{
+    display: none;
+  }
+}
+
